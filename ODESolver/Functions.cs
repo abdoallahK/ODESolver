@@ -11,12 +11,12 @@ namespace ODESolver
         /// <summary>
         /// Define an implicit function.
         /// </summary>
-        public delegate float ImplicitFunction(float x, float y);
+        public delegate double ImplicitFunction(double x, double y);
 
         /// <summary>
         /// Define an explicit function.
         /// </summary>
-        public delegate float ExplicitFunction(float x);
+        public delegate double ExplicitFunction(double x);
 
     }
 }

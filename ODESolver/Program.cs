@@ -6,13 +6,17 @@ namespace ODESolver
     {
         public static void Main(string[] args)
         {
-            float y = EulerMethod.ForwardEuler(0, 1, 0.00001f, 1, f);
-            Console.WriteLine(y);
+            double forward = Derivative.ForwardDerivative(1, 0.00001, f);
+            double backward = Derivative.BackwardDerivative(1, 0.00001, f);
+            double central = Derivative.CentralDerivative(1, 0.00001, f);
+            Console.WriteLine(forward);
+            Console.WriteLine(backward);
+            Console.WriteLine(central);
         }
 
-        public static float f(float x, float y)
+        public static double f(double x)
         {
-            return y;
+            return x * x;
         }
     }
 }

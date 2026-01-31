@@ -20,10 +20,10 @@ namespace ODESolver
         /// <param name="target">the final x value</param>
         /// <param name="f">the explicit slope function</param>
         /// <returns>the final y value</returns>
-        public static float ForwardEuler(float x0, float y0, float h, float target, Functions.ExplicitFunction f)
+        public static double ForwardEuler(double x0, double y0, double h, double target, Functions.ExplicitFunction f)
         {
-            float x = x0;
-            float y = y0;
+            double x = x0;
+            double y = y0;
             for (int i = 0; i < target / h; i++)
             {
                 x += h;
@@ -44,10 +44,10 @@ namespace ODESolver
         /// <param name="target">the fian x value</param>
         /// <param name="f">the implicit slope function</param>
         /// <returns>the final y value</returns>
-        public static float ForwardEuler(float x0, float y0, float h, float target, Functions.ImplicitFunction f)
+        public static double ForwardEuler(double x0, double y0, double h, double target, Functions.ImplicitFunction f)
         {
-            float x = x0;
-            float y = y0;
+            double x = x0;
+            double y = y0;
             for (int i = 0; i < target / h; i++)
             {
                 x += h;
