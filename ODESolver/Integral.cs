@@ -11,7 +11,6 @@
         /// <param name="xend">the final x value.</param>
         /// <param name="n">the number of steps.</param>
         /// <param name="f">the explicit function to be integrated.</param>
-        /// <returns></returns>
         public static double RiemannSum(double xstart, double xend, double n, Functions.ExplicitFunction f)
         {
             double dx = (xend - xstart) / n;
@@ -23,6 +22,26 @@
                 x += dx;
             }
             return sum;
+        }
+
+        /// <summary>
+        /// Returns F(x) on [xstart, xend] using Trapezoidal rule.
+        /// </summary>
+        /// <param name="xstart">the initial x value.</param>
+        /// <param name="xend">the final x value.</param>
+        /// <param name="n">the number of steps.</param>
+        /// <param name="f">the explicit function to be integrated.</param>
+        public static double TrapezoidalRule(double xstart, double xend, double n, Functions.ExplicitFunction f)
+        {
+            double dx = (xend - xstart) / n;
+            double sum = f(xstart) + f(xend);
+            double x = xstart + dx;
+            for (int i = 0; i <= n; i++)
+            {
+                sum += 2 * f(x);
+                x += dx;
+            }
+            return dx * 0.5 * sum;
         }
     }
 }
