@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-
-namespace ODESolver
+﻿namespace ODESolver
 {
     public class Program
     {
