@@ -2,10 +2,6 @@
 {
     public static class Derivative
     {
-        // we approximate derivatives using Taylor expansion
-        // dfdt approximatly equals f(t + h) - f(t) / h = dfdt + h * 0.5 * d2fdt2 + ...
-        // This is Super weird
-
         /// <summary>
         /// Returns dy/dx at x = x0 for an explicit function using the forwards difference method.
         /// </summary>
